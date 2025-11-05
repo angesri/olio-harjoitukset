@@ -22,7 +22,7 @@ int retSum(int a, int b){
 
 float retDiv(int a, int b){
     if(b == 0){
-        throw std::runtime_error("jakaja ei saa olla nolla!");
+        throw runtime_error("jakaja ei saa olla nolla!");
         }
 
     return (float) a / b;
