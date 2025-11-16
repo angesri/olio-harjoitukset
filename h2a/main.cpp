@@ -1,7 +1,9 @@
 #include "car.h"
 #include "rectangle.h"
+#include "student.h"
 
 #include <iostream>
+#include <memory>
 
 using namespace std;
 
@@ -23,6 +25,16 @@ int main()
     cout<<"Ymparysmitta: "<<objectRectangle1->getCircum()<<endl;
     delete objectRectangle1;
     objectRectangle1 = nullptr;
+
+    unique_ptr<Student> objectStudent1 = make_unique<Student>();
+    objectStudent1->setName("Riku");
+    objectStudent1->setStudentNumber(8);
+    objectStudent1->setAverage(8.0);
+    cout<<""<<endl;
+    cout<<"Opiskelijan nimi: "<<objectStudent1->getName()<<endl;
+    cout<<"Opiskelijanumero: "<<objectStudent1->getStudentNumber()<<endl;
+    cout<<"Opiskelijan keskiarvo: "<<objectStudent1->getAverage()<<endl;
+
 
     return 0;
 }
